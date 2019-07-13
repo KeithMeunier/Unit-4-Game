@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    
+
+<head>
+
+    <meta charset="UTF-8">
+    
+    <title>Crystal Collectors</title>
+
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+</head>
+
+
+<body>
+
+<!-- We create this first container to hold the majority of the content for our layout: The Jumbotron and 3 rows -->
+
+    <div class="container">
+
+<!-- THE JUMBOTRON  -->
+
+    <!-- The following creates the Crystal Collectors jumbotron -->
+    <!-- We insert a Bootstrap Jumbotron to create a header area on our document. We will clear what is not needed in the template
+         and modify the content. -->
+    <!-- class="text-center"  is a Bootstrap class that will center the text of the specific h1 tag -->
+    <!-- The content in the h1 tag has been bolded by the use of <strong></strong> -->
+    <!-- Placing the following   style="background-color: purple; color: white;"   in the jumbotron div will change the background color and 
+    the text color -->
+
+            <div class="jumbotron" style="background-color: blue; color: white;">
+                <div class="container">
+                    <h1 class="text-center"><strong>CRYSTAL COLLECTORS</strong></h1> 
+                </div>
+            </div>
+
+    
+
+    
+    
+    <!-- The following will add in the rows for each of the sections of the game -->
+
+
+
+
+
+    <!-- THE FIRST ROW: THE INSTRUCTION PANEL -->
+
+            <div class="row">
+
+    <!-- The following will create the instruction section -->
+    <!-- The instructions area will take up the width of the container - 12 columns -->
+    <!-- The instructions will be held inside of a bootstrap panel -->
+
+    <!-- Bootstrap panel for instructions: -->
+    <!-- Content updated for game -->
+
+
+            
+            <!-- The Panel's title -->
+
+    <!-- <div class="panel panel-default">   has been changed to   <div class="panel panel-primary" style="background-color: blue; color: white;"> 
+    so it will change the panel title's backgorund to blue and text to white -->
+    <!-- text-center   has been added to the h3 tag to center the panel title -->
+
+                <div class="col-lg-12">
+
+                    <div class="panel panel-primary" style="background-color: green; color: white;">
+                        <h4 class="panel-heading text-center">Instructions</h4>
+                    </div>
+
+            
+            
+            <!-- The Panel's Body -->
+
+    <!-- The instructions of the game is entered into the panel body. -->
+    <!-- The text of the instructions have been made smaller by the use of <small></small> tags -->
+
+                    <div class="panel-body"> 
+                        <p><small>You will be given a random number at the start of the game. There are four crystals below. By clicking on a crystal, you will add a specific amount of points to your total score. You will win the game by matching your total score to the random number, you lose the game if your total score goes above the random number. The value of each crystal is hidden from you until you click on it. Each time when the game starts, the game will change the value of each crystal.
+                        </small></p>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+
+
+
+<!-- THE SECOND ROW: TARGET SCORE PANEL + USER'S SCORE + CRYSTAL CHOICES-->
+
+
+            <div class="row">
+
+
+                
+            <!-- Target Score Panel's Title -->
+
+    <!-- The target score area will be a width of 3 columns to allow the other components of the game on this row -->
+    <!-- As above, the target score will be held inside of a bootstrap panel -->
+    <!-- <div class="panel panel-default">   has been changed to   <div class="panel panel-primary" style="background-color: red; color: white;"> 
+    so it will change the panel title's backgorund to red and text to white -->
+    <!-- text-center   has been added to the h5 and h6 tags to center the panel title -->
+
+
+                <div class="col-lg-3">
+
+                    <div class="panel panel-primary" style="background-color: red; color: white;">
+                        <div class="panel-heading">
+                            <h5 class="panel-heading text-center">Target Score</h5>
+                        </div>
+                    </div>    
+
+
+
+            <!-- Target Score Panel's Body -->
+
+<!-- The target score is entered into the panel body. -->
+<!-- The text of target score have been made bolded by the use of <strong></strong> tags -->
+<!-- An id called targetScore was set up in the h6 tag so that it accesible and changed by JS/JQ -->
+
+                        <div class="panel-body">
+                            <h6 class="text-center" id="targetScore"><strong>0</strong></h6>
+                        </div>
+
+                </div> 
+
+       
+
+
+            <!-- User's Score Panel's Title -->
+
+    <!-- The user's score area will be a width of 3 columns to fit the other components of the game on this row -->
+    <!-- As above, the target score will be held inside of a bootstrap panel -->
+    <!-- <div class="panel panel-default">   has been changed to   <div class="panel panel-primary" style="background-color: orange; color: white;"> 
+    so it will change the panel title's backgorund to orange and text to white -->
+    <!-- text-center   has been added to the h5 and h6 tags to center the panel title -->
+
+    <div class="col-lg-3">
+
+            <div class="panel panel-primary" style="background-color: orange; color: white;">
+                <div class="panel-heading">
+                    <h5 class="panel-heading text-center">Your Score</h5>
+                </div>
+            </div>    
+
+
+
+
+            <!-- User's Score Panel's Body -->
+
+<!-- The User's score is entered into the panel body. -->
+<!-- The text of User's score have been made bolded by the use of <strong></strong> tags -->
+<!-- An id called userScore was set up in the h6 tag so that it accesible and changed by JS/JQ -->
+
+                <div class="panel-body">
+                    <h6 class="text-center" id="userScore"><strong>0</strong></h6>
+                </div>
+
+        </div> 
+
+
+
+
+            <!-- Crystal Choices Panel's Title -->
+
+
+    <!-- The crystal choice area will be a width of 6 columns to take up the rest of the width's columns -->
+    <!-- As above, the choices will be held inside of a bootstrap panel -->
+    <!-- <div class="panel panel-default">   has been changed to   <div class="panel panel-primary" style="background-color: purple; color: white;"> 
+    so it will change the panel title's backgorund to purple and text to white -->
+    <!-- text-center   has been added to the h5 and h6 tags to center the panel title -->
+
+         <div class="col-lg-6">
+
+            <div class="panel panel-primary" style="background-color: purple; color: white;">
+                <div class="panel-heading">
+                    <h5 class="panel-heading text-center">Crystal Choices</h5>
+                </div>
+            </div>    
+
+
+
+
+            <!-- Crystal Choices Panel's Body-->
+
+<!-- The crystal choices is entered into the panel body as imagaes from the images folder in assets. -->
+<!-- The text of crystal choices have been made bolded by the use of <strong></strong> tags -->
+<!-- text-center   has been added to the div to center the crystal images in the panel's body -->
+<!-- Each of the images have been given an id so that they can be identified and used in our JavaScript / jQuery file -->
+
+                <div class="panel-body text-center">
+                    <img src="assets/images/Diamond.png" alt="" id="diamond">
+                    <img src="assets/images/Sapphire.png" alt="" id="sapphire">
+                    <img src="assets/images/Gem.png" alt="" id="gem">
+                    <img src="assets/images/Ruby.png" alt="" id="ruby">
+                </div>
+
+
+        </div> 
+
+        </div>
+
+
+
+
+
+<!-- THE THIRD ROW: COUNTER - WINS/LOSES-->
+
+
+        <div class="row"> 
+
+
+        <!-- Counter Panel's Title -->
+
+
+    <!-- The counter area will divided into two areas:
+    One for Wins and the other for Loses -->
+    <!-- Therefore the width of each area will be even at 6 columns each -->
+    <!-- As above, the counters will be held inside of a bootstrap panel -->
+    <!-- <div class="panel panel-default">   has been changed to   <div class="panel panel-primary" style="background-color: black; color: white;"> 
+    so it will change the panel title's backgorund to black and text to white -->
+    <!-- text-center   has been added to center the content -->
+    <!-- ids have been added (winCount and lossCount) to the h6 tags so that JQ can link to this HTML and update tally of losses and wins -->
+
+            
+            <div class="col-lg-6">
+
+                    <div class="panel panel-primary" style="background-color: black; color: rgb(25, 180, 11);">
+                        <div class="panel-heading">
+                            <h5 class="panel-heading text-center">Win Count</h5>
+                        </div>
+                    </div>    
+                    <div class="panel-body">
+                            <h6 class="text-center" id="winCount"><strong>0</strong></h6>
+                    </div>
+            
+            </div> 
+
+
+
+            <div class="col-lg-6">
+
+                    <div class="panel panel-primary" style="background-color: black; color: red;">
+                        <div class="panel-heading">
+                            <h5 class="panel-heading text-center">Loss Count</h5>
+                        </div>
+                    </div>    
+                    <div class="panel-body">
+                            <h6 class="text-center" id="lossCount"><strong>0</strong></h6>
+                    </div>
+            
+            </div> 
+          
+        </div>   
+
+
+    </div>
+
+
+<!-- 
+It is important to not only link to the jQuery CDN link, 
+it is important to do so before before linking to our JS file which following  
+-->
+
+<script
+src="https://code.jquery.com/jquery-3.4.1.js"
+integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+crossorigin="anonymous">
+</script>
+
+<!-- Important to link to the JavaScript file at the end of the HTML file: -->
+
+<script src="assets/javascript/game.js"></script>
+
+
+</body>
+    
+
+</html>
